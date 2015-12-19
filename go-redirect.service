@@ -1,5 +1,5 @@
 [Unit]
-Description=Status Dashboard Client
+Description=HTTP to HTTPS redirect
 After=network.target
 
 [Service]
