@@ -1,0 +1,9 @@
+[Unit]
+Description=Status Dashboard Client
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/go-redirect
+
+[Install]
+WantedBy=multi-user.target
