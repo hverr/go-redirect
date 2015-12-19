@@ -1,6 +1,8 @@
 go-redirect
 ===========
 
+Redirect HTTP to HTTPS
+
 ```sh
 go build
 ./go-redirect -help
