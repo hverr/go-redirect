@@ -6,4 +6,6 @@ RUN go get -v github.com/hverr/go-redirect && \
     go build && \
     mv go-redirect /usr/local/bin
 
+EXPOSE 80
+
 CMD [ "go-redirect" ]
