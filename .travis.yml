@@ -4,9 +4,9 @@ services:
 
 branches:
   except:
-  - /^feature-.*$/
-  - /^bugfix-.*$/
-  - /^hotfix-.*$/
+  - /^feature.*$/
+  - /^bugfix.*$/
+  - /^hotfix.*$/
 
 language: go
 
@@ -28,6 +28,7 @@ install:
 script:
   - CGO_ENABLED=0 GOOS=linux go build -a -ldflags '-s'
   - docker build -t "$DOCKER_USER"/go-ssl-redirect:$TRAVIS_TAG .
+  - ./test.sh
 
 deploy:
   skip_cleanup: true
