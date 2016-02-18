@@ -1,4 +1,4 @@
-docker run -d -p 80:80
+docker run -d -p 80:80 "$DOCKER_USER"/go-ssl-redirect:$TRAVIS_TAG
 output=`curl localhost/test`
 if [ "$output" = '<a href="https://localhost/test">Found</a>.' ]; then
   echo redirect successful
