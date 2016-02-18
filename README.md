@@ -1,4 +1,4 @@
-go-redirect [![Build Status](https://travis-ci.org/smiller171/go-redirect.svg?branch=master)](https://travis-ci.org/smiller171/go-redirect)
+go-redirect [![Circle CI](https://circleci.com/gh/smiller171/go-redirect/tree/master.svg?style=svg)](https://circleci.com/gh/smiller171/go-redirect/tree/master)
 ===========
 
 [![Join the chat at https://gitter.im/smiller171/go-redirect](https://badges.gitter.im/smiller171/go-redirect.svg)](https://gitter.im/smiller171/go-redirect?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
