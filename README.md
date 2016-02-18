@@ -1,17 +1,9 @@
 go-redirect
 ===========
 
-Redirect HTTP to HTTPS
+Redirect HTTP to HTTPS with Docker
 
 ```sh
-go build
-./go-redirect -help
+CGO_ENABLED=0 go build
+docker build .
 ```
-
-```sh
-cp go-redirect /usr/local/bin/go-redirect
-cp go-redirect.service /etc/systemd/system/go-redirect.service
-systemctl enable go-redirect
-systemctl start go-redirect
-systemctl status go-redirect
-```  
