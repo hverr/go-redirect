@@ -15,7 +15,6 @@ install:
 
 script:
   - CGO_ENABLED=0 GOOS=linux go build
-  - ls -la
   - docker build -t "$DOCKER_USER"/go-ssl-redirect:latest .
 
 deploy:
