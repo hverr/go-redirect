@@ -3,8 +3,10 @@ services:
   - docker
 
 branches:
-  only:
-  - master
+  except:
+  - /^feature-.*$/
+  - /^bugfix-.*$/
+  - /^hotfix-.*$/
 
 language: go
 
@@ -31,5 +33,4 @@ deploy:
   provider: script
   script: ./docker-deploy.sh
   on:
-    branch: master
     tags: true
