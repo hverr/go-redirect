@@ -19,7 +19,7 @@ install:
 
 script:
   - CGO_ENABLED=0 GOOS=linux go build -a -ldflags '-s'
-  - docker build -t "$DOCKER_USER"/go-ssl-redirect:latest .
+  - docker build -t "$DOCKER_USER"/go-ssl-redirect:$TRAVIS_TAG .
 
 deploy:
   skip_cleanup: true
@@ -27,3 +27,4 @@ deploy:
   script: ./docker-deploy.sh
   on:
     branch: master
+    tags: true
