@@ -14,7 +14,7 @@ install:
   - export PATH=$PATH:$HOME/gopath/bin
 
 script:
-  - CGO_ENABLED=0 GOOS=linux go build
+  - CGO_ENABLED=0 GOOS=linux go build -a -ldflags '-s'
   - docker build -t "$DOCKER_USER"/go-ssl-redirect:latest .
 
 deploy:
