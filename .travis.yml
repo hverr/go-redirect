@@ -18,6 +18,7 @@ script:
   - docker build -t "$DOCKER_USER"/go-ssl-redirect:latest .
 
 deploy:
+  skip_cleanup: true
   provider: script
   script: ./docker-deploy.sh
   on:
