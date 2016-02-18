@@ -1,4 +1,4 @@
-go-redirect
+go-redirect [![Build Status](https://travis-ci.org/smiller171/go-redirect.svg?branch=master)](https://travis-ci.org/smiller171/go-redirect)
 ===========
 
 Redirect HTTP to HTTPS with Docker
