@@ -4,9 +4,9 @@ services:
 
 branches:
   except:
-  - /^feature-.*$/
-  - /^bugfix-.*$/
-  - /^hotfix-.*$/
+  - /^feature.*$/
+  - /^bugfix.*$/
+  - /^hotfix.*$/
 
 language: go
 
