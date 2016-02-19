@@ -17,13 +17,7 @@ dependencies:
 test:
   override:
     - docker run -d -p 80:80 "$DOCKER_USER"/go-ssl-redirect:$TRAVIS_TAG
-    - if [ `curl -s localhost/test` = '<a href="https://localhost/test">Found</a>.' ]; then \
-      echo redirect successful \
-      exit 0 \
-    else \
-      echo redirect failed \
-      exit 1 \
-    fi
+    - curl -s localhost/test | grep '<a href="https://localhost/test">Found</a>.'
 deployment:
   release:
     tag: /.*/
