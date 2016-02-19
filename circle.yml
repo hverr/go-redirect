@@ -1,6 +1,15 @@
 machine:
   services:
     - docker
+notify:
+  webhooks:
+    - url: https://webhooks.gitter.im/e/c7b1ce86dbe3d488dc79
+    - url: https://api.opsgenie.com/v1/json/travisci?apiKey=317551e5-290f-4b6c-bb4c-64bf93b1ae67
+experimental:
+  notify:
+    branches:
+      only:
+        - master
 test:
   post:
     - CGO_ENABLED=0 GOOS=linux go build -a -ldflags '-s'
