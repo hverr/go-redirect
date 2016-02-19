@@ -13,14 +13,13 @@ experimental:
 dependencies:
   override:
     - CGO_ENABLED=0 GOOS=linux go build -a -ldflags '-s'
-    - docker build -t "$DOCKER_USER"/go-ssl-redirect .
+    - docker build -t "$DOCKER_USER"/go-ssl-redirect:$CIRCLE_TAG .
 test:
   override:
     - ./test.sh
-    - echo $CIRCLE_BRANCH
 deployment:
   release:
     tag: /.*/
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push "$DOCKER_USER"/go-ssl-redirect
+      - docker push "$DOCKER_USER"/go-ssl-redirect:$CIRCLE_TAG
