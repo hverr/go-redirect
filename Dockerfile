@@ -1,5 +1,5 @@
 FROM scratch
-MAINTAINER Scott Miller <scott.miller171@gmail.com>
+MAINTAINER Henri Verroken <henriverroken@gmail.com>
 
 ADD go-redirect go-redirect
 
