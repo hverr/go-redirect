@@ -1,10 +1,6 @@
 machine:
   services:
     - docker
-notify:
-  webhooks:
-    - url: https://webhooks.gitter.im/e/05ff36710b3b7177b0b5
-    - url: https://api.opsgenie.com/v1/json/circleci?apiKey=690d82ce-74ad-468f-88ef-d4f1a61d68f9
 experimental:
   notify:
     branches:
