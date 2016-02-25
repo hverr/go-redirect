@@ -1,11 +1,8 @@
-FROM golang:latest
+FROM scratch
 MAINTAINER Henri Verroken <henriverroken@gmail.com>
 
-RUN go get -v github.com/hverr/go-redirect && \
-    cd $GOPATH/src/github.com/hverr/go-redirect && \
-    go build && \
-    mv go-redirect /usr/local/bin
+ADD go-redirect go-redirect
 
 EXPOSE 80
 
-CMD [ "go-redirect" ]
+CMD [ "/go-redirect" ]
