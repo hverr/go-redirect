@@ -1,4 +1,4 @@
-go-redirect [![CircleCI branch](https://img.shields.io/circleci/project/hverr/go-redirect/master.svg)]()
+go-redirect [![CircleCI branch](https://img.shields.io/circleci/project/hverr/go-redirect/master.svg)](https://circleci.com/gh/hverr/go-redirect/)
 ===========
 
 Redirect HTTP to HTTPS with Docker
